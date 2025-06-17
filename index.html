@@ -1,3 +1,4 @@
+<!-- HINWEIS: GESAMTER CODE IST SEHR LANG UND WIRD IM NÄCHSTEN BEITRAG FORTGESETZT -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -11,7 +12,6 @@
       font-family: 'Cormorant Garamond', serif;
       background: radial-gradient(circle at top, #fff8e1, #fbe8b4);
       color: #4b2e2e;
-      overflow-x: hidden;
     }
 
     header {
@@ -31,7 +31,6 @@
       font-family: 'Great Vibes', cursive;
       font-size: 1.5rem;
       color: #9a3412;
-      margin-top: 0;
     }
 
     .divider {
@@ -44,15 +43,14 @@
     .container {
       max-width: 850px;
       margin: 0 auto;
-      padding: 1rem;
-      background: rgba(255, 255, 255, 0.85);
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.9);
       border-radius: 20px;
       box-shadow: 0 0 30px #facc15;
     }
 
     .image-wrapper {
       text-align: center;
-      margin-top: 2rem;
       position: relative;
     }
 
@@ -82,15 +80,18 @@
     }
 
     .text {
-      font-size: 1.3rem;
+      font-size: 1.25rem;
       line-height: 1.8;
       margin-top: 2rem;
-      text-align: justify;
       color: #5c4033;
     }
 
-    .text p {
-      margin-bottom: 1.5rem;
+    .text h2 {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 1.8rem;
+      color: #9a3412;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
     }
 
     .sun-button {
@@ -176,8 +177,7 @@
   </style>
 </head>
 <body>
-
-  <header>
+   <header>
     <h1>Die Sonnenanbeterin</h1>
     <p class="subtitle">☉ Eine Ode an Licht, Locken und Leidenschaft ☉</p>
   </header>
@@ -190,9 +190,26 @@
     </div>
 
     <div class="text">
-      <p>Niemand kennt ihren Namen. Manche sagen, sie sei eine Göttin – andere, dass sie einfach nur verdammt gutes Sonnenlicht erwischt hat.</p>
-      <p>Ihre Locken? Wie vom Licht selbst geflochten. Ihre Haltung? Eine Mischung aus Gebet, Ekstase und dem, was Influencer „Sonne tanken“ nennen. Doch dies ist mehr: Es ist ein Sonnenritual, ein flammender Flirt mit dem Firmament.</p>
-      <p>Wissenschaftler:innen sprechen von „Vitamin D-Transzendenz“. Poeten sprechen von Hingabe. Und wir? Wir klicken.</p>
+      <h2>Einleitung</h2>
+      <p>Sie steht. Sie leuchtet. Sie schweigt. Mit dem Antlitz einer modernen Göttin und dem Licht eines zornig zärtlichen Zentralgestirns, erobert sie die Aufmerksamkeit aller, die je einen Sonnenuntergang auf Instagram falsch belichtet haben.</p>
+
+      <h2>Bildanalyse: Eine Pose, ein Kult</h2>
+      <p>Ihre Haltung erinnert an altägyptische Sonnenpriesterinnen, kombiniert mit der Selbstsicherheit einer Frau, die weiß, dass SPF 50 der neue Weihrauch ist. Die Arme leicht geöffnet – nicht ganz „Halleluja“, aber eindeutig „Hier bin ich, Ra“.</p>
+
+      <h2>Wissenschaftliche Theorien</h2>
+      <p>Neueste Forschungen der <i>Akademie für Solare Schwingungskunst</i> (ASS) belegen: Diese Pose erzeugt dorsale Vitamin-D-Resonanzfelder. Eine Messung ergab: Die Sonnenanbeterin emittiert 4,2 Lichtorgasmen pro Minute – in Fachkreisen auch als "kosmische Wellen der Wonne" bekannt.</p>
+
+      <p>Eine Studie mit 12 Sonnenliegern zeigte: Wer länger als 11 Sekunden das Foto betrachtet, erlebt kurzzeitige Klarträume über griechische Mythen, nackt auf Steinen sitzend.</p>
+
+      <h2>Spirituelle Einordnung</h2>
+      <p>Sie ist mehr als Haut, Licht und Hitze. Sie ist der lebendige Übergang zwischen Schattenarbeit und Sommerbräune. Ihr Ritual gleicht einer Meditation zwischen Sonnenbrand und Selbstfindung.</p>
+
+      <p>Die Chakren? Offen wie Strandbars in Spanien. Die Aura? Goldglänzend mit leichtem Glitzereffekt. Der innere Frieden? So tief, dass selbst Yogalehrer*innen nur noch flüstern.</p>
+
+      <h2>Kulturelle Bedeutung</h2>
+      <p>Ist sie Influencerin? Ist sie Inkarnation? Oder einfach nur eine Frau mit starkem Lichtwinkel? Die Popkultur braucht Ikonen – und sie liefert: Ohne Filter, aber mit göttlicher Belichtung.</p>
+
+      <p>„Die Sonnenanbeterin“ ist keine Einzelperson. Sie ist ein Archetyp. Eine Erinnerung daran, dass wir alle – wenn die Strahlen fallen – kurz daran glauben, heilig zu sein.</p>
     </div>
 
     <div class="sun-button">
@@ -204,10 +221,19 @@
     </div>
 
     <div class="comments">
-      <h2>Dein Sonnengebet</h2>
+      <h2>Sonnengebete der Gläubigen</h2>
+
+      <div class="comment-list" id="commentList">
+        <p>„Oh goldene Lady, du bist heißer als mein WLAN-Router im August.“ – Max S.</p>
+        <p>„Ich habe dich zehn Minuten angestarrt. Jetzt bin ich spirituell entblendet.“ – Eliane aus Köln</p>
+        <p>„Mit dir würde ich auch in die pralle Mittagssonne treten – freiwillig.“ – Der anonyme Schattenparker</p>
+        <p>„Dein Licht trifft mich tiefer als meine letzte Beziehung.“ – @lichtliebhaber89</p>
+        <p>„Sonnenanbetung ist mein neues Yoga. Und du bist mein Sonnengruß.“ – Clara, 33, halb erleuchtet</p>
+      </div>
+
+      <h2>Dein eigenes Sonnengebet</h2>
       <textarea id="prayer" rows="4" placeholder="Oh Sonne, ich verneige mich vor deiner Wärme..."></textarea>
       <button onclick="postPrayer()">Senden</button>
-      <div class="comment-list" id="commentList"></div>
     </div>
   </div>
 
@@ -223,7 +249,7 @@
       if (!text) return;
       const p = document.createElement('p');
       p.textContent = text;
-      document.getElementById('commentList').appendChild(p);
+      document.getElementById('commentList').prepend(p);
       document.getElementById('prayer').value = '';
     }
   </script>
