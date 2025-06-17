@@ -1,121 +1,231 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Gesucht: Anna G. – Wo steckt DEUTSCHLANDS G-PUNKT?</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Die Sonnenanbeterin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Great+Vibes&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background: #fff;
-      color: #000;
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
+      font-family: 'Cormorant Garamond', serif;
+      background: radial-gradient(circle at top, #fff8e1, #fbe8b4);
+      color: #4b2e2e;
+      overflow-x: hidden;
     }
-    .headline {
-      font-size: 48px;
-      font-weight: bold;
-      color: red;
-      text-transform: uppercase;
+
+    header {
       text-align: center;
-      margin-bottom: 10px;
+      padding: 3rem 1rem 1rem;
     }
-    .subheadline {
-      font-size: 24px;
-      font-weight: bold;
-      color: black;
+
+    h1 {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 3rem;
+      color: #a16207;
+      text-shadow: 1px 1px 2px #fef9c3;
+      margin-bottom: 0.2rem;
+    }
+
+    .subtitle {
+      font-family: 'Great Vibes', cursive;
+      font-size: 1.5rem;
+      color: #9a3412;
+      margin-top: 0;
+    }
+
+    .divider {
       text-align: center;
-      margin-bottom: 30px;
+      font-size: 1.5rem;
+      margin: 2rem 0;
+      color: #d97706;
     }
-    .columns {
+
+    .container {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 20px;
+      box-shadow: 0 0 30px #facc15;
+    }
+
+    .image-wrapper {
+      text-align: center;
+      margin-top: 2rem;
+      position: relative;
+    }
+
+    .image-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 320px;
+      height: 320px;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(253, 224, 71, 0.4), transparent 60%);
+      filter: blur(20px);
+      z-index: 0;
+    }
+
+    .main-image {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      border: 8px solid #fde68a;
+      object-fit: cover;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 0 20px #fcd34d;
+    }
+
+    .text {
+      font-size: 1.3rem;
+      line-height: 1.8;
+      margin-top: 2rem;
+      text-align: justify;
+      color: #5c4033;
+    }
+
+    .text p {
+      margin-bottom: 1.5rem;
+    }
+
+    .sun-button {
       display: flex;
-      gap: 20px;
+      justify-content: center;
+      margin-top: 3rem;
     }
-    .column {
-      flex: 1;
-    }
-    h2 {
-      background: yellow;
-      color: black;
-      padding: 5px;
-      text-transform: uppercase;
-    }
-    .quote-box {
-      border: 3px solid red;
-      padding: 10px;
-      background: #ffe6e6;
+
+    button#sun {
+      background: radial-gradient(circle, #facc15, #f59e0b);
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 50%;
+      font-size: 1.3rem;
+      cursor: pointer;
+      box-shadow: 0 0 25px #facc15;
+      transition: transform 0.3s, box-shadow 0.3s;
+      color: #7c2d12;
       font-weight: bold;
-      font-style: italic;
-      margin: 20px 0;
     }
-    .image-box {
-      border: 2px solid black;
-      padding: 5px;
-      margin: 20px 0;
+
+    button#sun:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 40px #fbbf24;
     }
-    .image-box img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-    .caption {
-      font-size: 14px;
-      font-style: italic;
+
+    .counter {
       text-align: center;
-      margin-top: 5px;
+      font-style: italic;
+      margin-top: 1rem;
+      font-size: 1.1rem;
     }
-    .highlight {
-      background: red;
+
+    .comments {
+      margin-top: 3rem;
+      padding: 2rem;
+      background: #fff7e6;
+      border-radius: 15px;
+      box-shadow: inset 0 0 15px #fef3c7;
+    }
+
+    .comments h2 {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 2rem;
+      text-align: center;
+      color: #9a3412;
+    }
+
+    .comments textarea {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.1rem;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      resize: vertical;
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    .comments button {
+      margin-top: 1rem;
+      padding: 0.7rem 1.5rem;
+      background-color: #f59e0b;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
       color: white;
-      padding: 2px 6px;
       font-weight: bold;
+      float: right;
+    }
+
+    .comment-list {
+      margin-top: 2rem;
+    }
+
+    .comment-list p {
+      background: #fff;
+      padding: 0.8rem 1rem;
+      border-left: 4px solid #facc15;
+      margin-bottom: 0.8rem;
+      border-radius: 8px;
+      font-style: italic;
     }
   </style>
 </head>
 <body>
-  <div class="headline">Wanted: Anna G.</div>
-  <div class="subheadline">Wo steckt DEUTSCHLANDS G-PUNKT?</div>
 
-  <div class="columns">
-    <div class="column">
-      <h2>Die mysteriöse Verschwundene</h2>
-      <p>Ihr Name ist Anna. Sie ist unglaublich. Und sie ist WEG! Seit Tagen irren Freunde, Ex-Liebhaber und völlig verwirrte Influencer durchs Land. Ihr Nachname hat sie nur mit G-Punkt angegeben – und genau DAS bringt ganz Deutschland ins Schwitzen.</p>
+  <header>
+    <h1>Die Sonnenanbeterin</h1>
+    <p class="subtitle">☉ Eine Ode an Licht, Locken und Leidenschaft ☉</p>
+  </header>
 
-      <div class="quote-box">„Alle beteiligten waren schockiert! Der G-Punkt war verschwunden. Höchstwahrscheinlich gestohlen. Die Vermutung liegt nahe,dass es Anna war. Ihr Name wurde oft im Zusammenhang mit ihm gesehen. Zudem hat Sie sich durch auffällig zufriedenes Grinsen verdächtig gemacht“ – Sprecher des Polizeirevier 69 (für innere Angelegenheiten)</div>
+  <div class="divider">✦✺☉✺✦</div>
 
-      <h2>Das Internet dreht durch</h2>
-      <p>Auf TikTok trendet der Hashtag <strong>#WoIstAnna(s)G-Punkt</strong>  Millionen klicken, scrollen, fantasieren. Erste User melden Sichtungen in Leipzig, andere vermuten sie in einem buddhistischen Retreat. Aber was ist die Wahrheit?</p>
-      
-      <div class="image-box">
-        <img src="https://github.com/LB6452/BILD1/blob/main/PXL_20240922_170036084~4.jpg?raw=true" alt="Person mit Smartphone im Grünen" width="300">
-        <div class="caption">„Ich schwör’s dir, ich kam zu ihr, sie sah mich – und zack, war ihr Schritt klatschnass!“ – dieser italienische Barkeeper will Anna G. getroffen haben.</div>
-      </div>
+  <div class="container">
+    <div class="image-wrapper">
+      <img src="https://via.placeholder.com/400x400?text=Sonnenanbeterin" alt="Sonnenanbeterin" class="main-image" />
     </div>
 
-    <div class="column">
-      <h2>Der Mythos lebt</h2>
-      <p>Psychologen sprechen bereits vom „<strong>kollektiven G-Punkt-Syndrom</strong>“. Eine ganze Nation auf der Suche – nach Orientierung, nach Erfüllung, nach dem Ziel.</p>
+    <div class="text">
+      <p>Niemand kennt ihren Namen. Manche sagen, sie sei eine Göttin – andere, dass sie einfach nur verdammt gutes Sonnenlicht erwischt hat.</p>
+      <p>Ihre Locken? Wie vom Licht selbst geflochten. Ihre Haltung? Eine Mischung aus Gebet, Ekstase und dem, was Influencer „Sonne tanken“ nennen. Doch dies ist mehr: Es ist ein Sonnenritual, ein flammender Flirt mit dem Firmament.</p>
+      <p>Wissenschaftler:innen sprechen von „Vitamin D-Transzendenz“. Poeten sprechen von Hingabe. Und wir? Wir klicken.</p>
+    </div>
 
-      <div class="quote-box">„Früher suchten wir den Sinn des Lebens. Jetzt suchen wir Anna G.“ – Medienexperte Dr. Jörg Krawall</div>
+    <div class="sun-button">
+      <button id="sun">☀ Anbeten</button>
+    </div>
 
-      <h2>Heiße Spur in Italien?</h2>
-      <p>Neues Foto aufgetaucht! Spaziergang am Lago Maggiore – ist das etwa Anna G. mit einer Freundin? Experten vermuten: Die Frau rechts hat ihren G-Punkt vermutlich schon gefunden.</p>
+    <div class="counter">
+      Sonnenenergie gesammelt: <span id="counter">0</span>
+    </div>
 
-      
-      <div class="image-box">
-        <img src="https://raw.githubusercontent.com/LB6452/BILD1/main/PXL_20240418_145610465~2.jpg" alt="Zwei Frauen am See" width="300">
-        <div class="caption">Mysteriös: Ist das Anna G. am Seeufer? Und wer ist die Frau an ihrer Seite?</div>
-      </div>
-
-      <h2>Ein Land tastet sich vor</h2>
-      <p>Die große Frage bleibt: <strong>Wer ist sie wirklich?</strong> Und: <strong>Warum hat sie uns alle so tief berührt?</strong> Die Antwort könnte unter der Oberfläche liegen. Oder im Herzen ganz Deutschlands.</p>
-
-      <div class="quote-box">„Wenn wir sie finden, finden wir vielleicht auch uns selbst.“ – Philosophin Luna S. (21)</div>
+    <div class="comments">
+      <h2>Dein Sonnengebet</h2>
+      <textarea id="prayer" rows="4" placeholder="Oh Sonne, ich verneige mich vor deiner Wärme..."></textarea>
+      <button onclick="postPrayer()">Senden</button>
+      <div class="comment-list" id="commentList"></div>
     </div>
   </div>
-</body>
-</html>
+
+  <script>
+    let counter = 0;
+    document.getElementById('sun').addEventListener('click', () => {
+      counter++;
+      document.getElementById('counter').textContent = counter;
+    });
+
+    function postPrayer() {
+      const text = document.getElementById('prayer').value.trim();
+      if (!text) return;
+      const p = document.createElement('p');
+      p.textContent = text;
+      document.getElementById('commentList').appendChild(p);
+      document.getElementById('prayer').value = '';
+    }
+  </script>
 </body>
 </html>
